@@ -55,9 +55,9 @@ func TestCreateTenant(t *testing.T) {
 			assert: assertGoldenFile("./testdata/create_tenant/tenant-with-cluster-role.yaml"),
 		},
 		{
-			name:   "tenant with skip namespace create",
-			args:   "create tenant dev-team --with-namespace=apps --cluster-role=cluster-admin --skip-namespace-create --export",
-			assert: assertGoldenFile("./testdata/create_tenant/tenant-with-skip-namespace-create.yaml"),
+			name:   "tenant with skip namespace",
+			args:   "create tenant dev-team --with-namespace=apps --cluster-role=cluster-admin --skip-namespace --export",
+			assert: assertGoldenFile("./testdata/create_tenant/tenant-with-skip-namespace.yaml"),
 		},
 	}
 

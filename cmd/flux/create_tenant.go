@@ -70,7 +70,7 @@ func init() {
 	createTenantCmd.Flags().StringSliceVar(&tenantArgs.namespaces, "with-namespace", nil, "namespace belonging to this tenant")
 	createTenantCmd.Flags().StringVar(&tenantArgs.clusterRole, "cluster-role", "cluster-admin", "cluster role of the tenant role binding")
 	createTenantCmd.Flags().StringVar(&tenantArgs.account, "with-service-account", "", "service account belonging to this tenant")
-	createTenantCmd.Flags().BoolVar(&tenantArgs.skipNamespace, "skip-namespace-create", false, "skip namespace creation (namespace must exist already)")
+	createTenantCmd.Flags().BoolVar(&tenantArgs.skipNamespace, "skip-namespace", false, "skip namespace creation (namespace must exist already)")
 	createCmd.AddCommand(createTenantCmd)
 }
 
